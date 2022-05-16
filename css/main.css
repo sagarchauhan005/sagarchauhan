@@ -4174,3 +4174,25 @@ article.blog-single .blog-content {
 .job-date{
     color: #862121 !important;
 }
+
+#my-hustle{
+    padding-bottom: 3rem !important;
+}
+
+#quick-call > h1{
+    color:white !important;
+}
+
+#quick-call > .lead{
+    color:white !important;
+}
+
+#calendly-call{
+    border-color: white !important;
+}
+
+#calendly-call:hover{
+    border-color: white !important;
+    background: white !important;
+    color: black !important;
+}
