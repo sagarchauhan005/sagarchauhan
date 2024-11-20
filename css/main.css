@@ -4245,7 +4245,7 @@ article.blog-single .blog-content {
     color: #E23744;
 }
 
-.container {
+.container-tweet {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
@@ -4256,19 +4256,19 @@ article.blog-single .blog-content {
     border-radius: 8px;
 }
 
-.column {
+.column-tweet {
     flex: 1;
     margin: 0 10px;
     text-align: center;
 }
 
-.column h2 {
+.column-tweet h2 {
     color: #d32f2f;
     font-size: 1.5rem;
     margin-bottom: 15px;
 }
 
-.button {
+.button-tweet {
     display: inline-block;
     background-color: #1DA1F2;
     color: white;
@@ -4282,6 +4282,6 @@ article.blog-single .blog-content {
 }
 
 
-.button:hover {
+.button-tweet:hover {
     background-color: #0d95e8;
 }
