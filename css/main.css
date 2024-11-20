@@ -1161,6 +1161,10 @@ button::-moz-focus-inner, input::-moz-focus-inner {
     content: "";
 }
 
+.skill-bars li .percent1 {
+    width: 1%;
+}
+
 .skill-bars li .percent5 {
     width: 5%;
 }
@@ -4195,4 +4199,48 @@ article.blog-single .blog-content {
     border-color: white !important;
     background: white !important;
     color: black !important;
+}
+
+/* Ticker Container */
+.ticker-container {
+    background-color: rgba(0, 0, 0, 0.8); /* Subtle black background */
+    color: #fff; /* White text */
+    font-family: inherit; /* Inherit fonts from the website */
+    font-size: 14px; /* Match default size */
+    padding: 5px 0;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 9999;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.cos-home-content{
+    padding-bottom: 23em;
+}
+/* Ticker Message */
+.ticker-message {
+    display: inline-block;
+    white-space: nowrap;
+    animation: ticker-scroll 15s linear infinite;
+}
+
+/* Ticker Scroll Animation */
+@keyframes ticker-scroll {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+
+.s-home .cos-overlay{
+    opacity : 0.1 !important;
+}
+
+.zomato{
+    color: #E23744;
 }
