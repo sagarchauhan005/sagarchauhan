@@ -1,26 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
+    <title>Dev Timeline Calculator</title>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dev Timeline Estimator</title>
-    <meta name="description" content="I am an experienced Product Leader with overall 8 years of experience in product
-    conceptualization, designing, development, & launches for web & mobile platform products.">
-    <meta name="author" content="Sagar Chauhan | Assistant Vice President - Technology">
+        <!-- mobile specific metas
+    ================================================== -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Calculate timeline of any task correctly with correct estimations">
+    <meta name="author" content="Sagar Chauhan | Dev Timeline Calculator">
 
     <meta name="image" property="image" content="https://raw.githubusercontent.com/sagarchauhan005/sagarchauhan005.github.io/master/images/background.png">
 
     <meta property="og:url" content="https://sagarchauhan005.github.io/">
-    <meta property="og:title" content="Sagar Chauhan | Chief of Staff | Zomato ">
-    <meta property="og:description" content="I am an experienced Product Leader with overall 8 years of experience in product
-        conceptualization, designing, development, & launches for web & mobile platform products.">
+    <meta property="og:title" content="Sagar Chauhan | Dev Timeline Calculator ">
+    <meta property="og:description" content="Calculate timeline of any task correctly with correct estimations">
     <meta property="og:type" content="website">
     <meta property="og:image" content="https://raw.githubusercontent.com/sagarchauhan005/sagarchauhan005.github.io/master/images/background.png">
 
     <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="Sagar Chauhan | Chief of Staff | Zomato">
-    <meta name="twitter:description" content="I am an experienced Product Leader with overall 8 years of experience in product
-        conceptualization, designing, development, & launches for web & mobile platform products.">
+    <meta name="twitter:title" content="Sagar Chauhan | Dev Timeline Calculator">
+    <meta name="twitter:description" content="Calculate timeline of any task correctly with correct estimations">
     <meta name="twitter:image:src" content="https://raw.githubusercontent.com/sagarchauhan005/sagarchauhan005.github.io/master/images/background.png">
     <meta name="twitter:domain" content="https://sagarchauhan005.github.io/">
 
@@ -123,6 +121,12 @@
                 order: 3;
             }
         }
+        .placeholder-text {
+            text-align: center;
+            color: #6c757d;
+            font-size: 16px;
+            margin-top: 20px;
+        }
     </style>
 </head>
 <body>
@@ -183,6 +187,7 @@
                     <h3>Last 5 Estimations:</h3>
                     <div class="nav nav-tabs" id="historyTabs" role="tablist"></div>
                     <div class="tab-content" id="historyContent"></div>
+                    <p id="placeholderText" class="placeholder-text">You have no estimations, please try adding one</p>
                 </div>
             </div>
         </div>
@@ -371,9 +376,17 @@
             const history = JSON.parse(localStorage.getItem('timelineHistory')) || [];
             const historyTabs = document.getElementById('historyTabs');
             const historyContent = document.getElementById('historyContent');
+            const placeholderText = document.getElementById('placeholderText');
 
             historyTabs.innerHTML = '';
             historyContent.innerHTML = '';
+
+            if (history.length === 0) {
+                placeholderText.style.display = 'block';
+                return;
+            }
+
+            placeholderText.style.display = 'none';
 
             history.forEach((entry, index) => {
                 const isActive = index === 0 ? 'active' : '';
