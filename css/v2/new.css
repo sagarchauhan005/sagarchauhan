@@ -3205,7 +3205,7 @@ scrollbar-width: none;  /* Firefox */
   background: #fff;
   border-radius: 4px;
   overflow: hidden;
-  height: 320px;
+  height: 260px;
   text-align: center;
   text-decoration: none;
   color: inherit;
@@ -3217,14 +3217,15 @@ scrollbar-width: none;  /* Firefox */
 
 .product-card img {
   width: 100%;
-  height: 200px;
-  object-fit: cover;
+  min-height: 134px;
+  max-height: 134px;
+  object-fit: fill;
   border-bottom: 1px solid #eee;
 }
 
 .product-card h3 {
   font-size: 1.1rem;
-  margin: 0.5rem 0;
+  margin: 1rem 0;
   color: #333;
 }
 
