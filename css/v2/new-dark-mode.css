@@ -3666,3 +3666,18 @@ scrollbar-width: none;  /* Firefox */
       max-width: 200px;
   }
 }
+
+.timeline-hero_heading-wrapper, .industries{
+  opacity: 0; /* Initially hidden */
+  animation: fadeInText 1s ease-in-out forwards;
+}
+
+/* Keyframes for fade-in animation */
+@keyframes fadeInText {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
