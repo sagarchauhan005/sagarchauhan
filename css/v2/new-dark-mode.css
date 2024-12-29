@@ -3271,7 +3271,7 @@ scrollbar-width: none;  /* Firefox */
 /* Responsive adjustments */
 @media (max-width: 768px) {
   .product-card {
-      flex: 0 0 290px;
+      flex: 0 0 250px;
   }
 
   .slider-btn {
@@ -3600,7 +3600,7 @@ scrollbar-width: none;  /* Firefox */
 .my-personality-container {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   max-width: 1200px;
   margin: 0 auto;
   gap: 2rem;
